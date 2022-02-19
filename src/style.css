@@ -44,9 +44,10 @@ body {
   align-items: center;
 }
 
-.box-container {
+.box-container,
+.clock__column {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .box {
@@ -72,11 +73,6 @@ body {
 .box--quater {
   width: 420px;
   height: 420px;
-}
-
-.clock__column {
-  display: flex;
-  justify-content: space-between;
 }
 
 #clock {
@@ -105,8 +101,10 @@ body {
   margin-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-#todo__input {
-  width: 275px;
+
+#todo__input,
+.calendar__time,
+.calendar__text {
   border: none;
   padding: 0 10px;
   border-radius: 10px;
@@ -119,11 +117,15 @@ body {
   list-style: none;
 }
 
+li,
+.calendar__column {
+  margin-bottom: 10px;
+}
+
 .todo__button {
   border: 1px solid white;
   border-radius: 100%;
   opacity: 0.4;
-  margin-bottom: 10px;
   margin-left: 5px;
   color: gray;
   cursor: pointer;
@@ -135,6 +137,13 @@ body {
 
 .done {
   text-decoration-line: line-through;
+}
+
+.calendar__column {
+  display: flex;
+}
+.calendar__text {
+  flex: 1;
 }
 
 .hidden {

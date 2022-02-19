@@ -51,14 +51,22 @@
         <ul id="todo__list"></ul>
       </div>
       <div class="box box--double" id="calendar">
-        <div id="calendar__title">오늘 일정 | 2월 20일 (일)</div>
-        <form>
-          <div><input type="time" />일정 1</div>
-          <div><input type="time" />일정 2</div>
-          <div><input type="time" />일정 3</div>
-        </form>
+        <div id="calendar__title"></div>
+        <div class="calendar__column">
+          <input class="calendar__time" type="time" />
+          <input class="calendar__text" type="text" placeholder="일정1" />
+        </div>
+        <div class="calendar__column">
+          <input class="calendar__time" type="time" />
+          <input class="calendar__text" type="text" placeholder="일정2" />
+        </div>
+        <div class="calendar__column">
+          <input class="calendar__time" type="time" />
+          <input class="calendar__text" type="text" placeholder="일정3" />
+        </div>
       </div>
     </div>
+    <script src="src/calendar.js"></script>
     <script src="src/clock.js"></script>
     <script src="src/todo.js"></script>
     <script src="src/greeting.js"></script>
