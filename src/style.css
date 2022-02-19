@@ -5,8 +5,6 @@
 }
 
 body {
-  /* width: 100vw; */
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,14 +39,9 @@ body {
 
 #main-contents {
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.hidden {
-  display: none;
 }
 
 .box-container {
@@ -67,6 +60,9 @@ body {
 
 .box--single {
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box--double {
@@ -76,13 +72,6 @@ body {
 .box--quater {
   width: 420px;
   height: 420px;
-}
-
-#weather,
-#clock {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .clock__column {
@@ -107,7 +96,11 @@ body {
   margin-bottom: 30px;
 }
 
-#todo__form {
+#todo {
+  overflow: auto;
+}
+#todo__form,
+#calendar__title {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -129,7 +122,7 @@ body {
 .todo__button {
   border: 1px solid white;
   border-radius: 100%;
-  opacity: 0.5;
+  opacity: 0.4;
   margin-bottom: 10px;
   margin-left: 5px;
   color: gray;
@@ -142,4 +135,8 @@ body {
 
 .done {
   text-decoration-line: line-through;
+}
+
+.hidden {
+  display: none;
 }

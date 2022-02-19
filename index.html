@@ -7,7 +7,7 @@
   </head>
   <body>
     <form id="login-form" class="hidden">
-      <div>
+      <div style="width: 100vw; height: 100vh">
         <img
           src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__340.jpg"
         />
@@ -21,7 +21,7 @@
       </div>
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <div id="main-contents">
+    <div class="main-contents hidden">
       <div class="box-container">
         <div class="box box--single" id="clock">
           <div id="clock__hour"></div>
@@ -50,7 +50,14 @@
         </form>
         <ul id="todo__list"></ul>
       </div>
-      <div class="box box--double" id="calendar"></div>
+      <div class="box box--double" id="calendar">
+        <div id="calendar__title">오늘 일정 | 2월 20일 (일)</div>
+        <form>
+          <div><input type="time" />일정 1</div>
+          <div><input type="time" />일정 2</div>
+          <div><input type="time" />일정 3</div>
+        </form>
+      </div>
     </div>
     <script src="src/clock.js"></script>
     <script src="src/todo.js"></script>
