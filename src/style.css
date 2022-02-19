@@ -1,6 +1,8 @@
+@import "reset.css";
+
 body {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,4 +37,74 @@ body {
 
 .hidden {
   display: none;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  height: 200px;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 30px;
+  margin: 10px 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box--single {
+  width: 200px;
+}
+
+.box--double {
+  width: 420px;
+}
+
+.box--quater {
+  width: 420px;
+  height: 420px;
+}
+
+#clock {
+  font-size: 70px;
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: 10px;
+}
+
+#weather {
+  font-size: 18px;
+}
+#weather__temperature {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+#todo__input {
+  border: none;
+  padding: 0 10px;
+  border-radius: 10px;
+  height: 30px;
+  opacity: 0.4;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#todo__list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.todo__button {
+  border: 1px solid white;
+  border-radius: 100%;
+  opacity: 0.6;
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.todo__span {
+  padding-left: 10px;
 }
