@@ -1,5 +1,9 @@
 @import "reset.css";
 
+* {
+  color: rgb(50, 50, 50);
+}
+
 body {
   /* width: 100vw; */
   /* height: 100vh; */
@@ -35,6 +39,14 @@ body {
   opacity: 50%;
 }
 
+#main-contents {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hidden {
   display: none;
 }
@@ -66,17 +78,29 @@ body {
   height: 420px;
 }
 
+#weather,
+#clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clock__column {
+  display: flex;
+  justify-content: space-between;
+}
+
 #clock {
   font-size: 70px;
   font-weight: 600;
   text-align: right;
   letter-spacing: 10px;
 }
-
-#weather {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#clock__ampm {
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 5px;
+  padding-top: 35px;
 }
 #weather__temperature {
   font-size: 50px;
@@ -89,6 +113,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 #todo__input {
+  width: 275px;
   border: none;
   padding: 0 10px;
   border-radius: 10px;

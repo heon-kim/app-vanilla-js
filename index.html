@@ -21,26 +21,38 @@
       </div>
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <div class="box-container">
-      <div class="box box--single" id="clock">
-        <div id="clock__hour">10</div>
-        <div id="clock__minute">29</div>
+    <div id="main-contents">
+      <div class="box-container">
+        <div class="box box--single" id="clock">
+          <div id="clock__hour"></div>
+          <div class="clock__column">
+            <div id="clock__ampm"></div>
+            <div id="clock__minute"></div>
+          </div>
+        </div>
+        <div class="box box--single" id="weather">
+          <div id="weather__city">서울</div>
+          <div id="weather__temperature">-4℃</div>
+          <div id="weather__climate">대체로 청명함</div>
+          <div id="weather__temperature--info">최고:4 최저:-7</div>
+        </div>
       </div>
-      <div class="box box--single" id="weather">
-        <div id="weather__city">서울</div>
-        <div id="weather__temperature">-4℃</div>
-        <div id="weather__climate">대체로 청명함</div>
-        <div id="weather__temperature--info">최고:4 최저:-7</div>
+      <div class="box box--quater" id="todo">
+        <form id="todo__form">
+          <label
+            >오늘 할 일
+            <input
+              id="todo__input"
+              type="text"
+              placeholder="할 일을 입력하세요."
+            />
+          </label>
+        </form>
+        <ul id="todo__list"></ul>
       </div>
+      <div class="box box--double" id="calendar"></div>
     </div>
-    <div class="box box--quater" id="todo">
-      <form id="todo__form">
-        <label>오늘 할 일</label>
-        <input id="todo__input" type="text" placeholder="할 일을 입력하세요." />
-      </form>
-      <ul id="todo__list"></ul>
-    </div>
-    <div class="box box--double" id="calendar"></div>
+    <script src="src/clock.js"></script>
     <script src="src/todo.js"></script>
     <script src="src/greeting.js"></script>
     <script src="src/background.js"></script>
