@@ -74,13 +74,20 @@ body {
 }
 
 #weather {
-  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #weather__temperature {
   font-size: 50px;
   margin-bottom: 30px;
 }
 
+#todo__form {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 #todo__input {
   border: none;
   padding: 0 10px;
@@ -88,23 +95,26 @@ body {
   height: 30px;
   opacity: 0.4;
   margin-left: 10px;
-  margin-bottom: 10px;
 }
 
 #todo__list {
   list-style: none;
-  padding-left: 20px;
 }
 
 .todo__button {
   border: 1px solid white;
   border-radius: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
   margin-bottom: 10px;
+  margin-left: 5px;
   color: gray;
   cursor: pointer;
 }
 
 .todo__span {
-  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.done {
+  text-decoration-line: line-through;
 }

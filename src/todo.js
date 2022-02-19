@@ -3,35 +3,45 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo__list");
 
 const toDos_KEY = "toDos";
-let toDos = [];
+let toDoArray = [];
 
 function saveToDos() {
-  localStorage.setItem(toDos_KEY, JSON.stringify(toDos));
+  localStorage.setItem(toDos_KEY, JSON.stringify(toDoArray));
+}
+
+function doneToDo(event) {
+  const span = event.target.nextSibling;
+  span.classList.toggle("done");
 }
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
-  toDos = toDos.filter((toDosItem) => toDosItem.id !== parseInt(li.id));
+  toDoArray = toDoArray.filter((toDosItem) => toDosItem.id !== parseInt(li.id));
   saveToDos();
 }
 
 function paintToDo(newToDoObj) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  const button = document.createElement("button");
+  const dellBtn = document.createElement("button");
+  const doneBtn = document.createElement("button");
 
-  li.appendChild(button);
+  li.appendChild(dellBtn);
+  li.appendChild(doneBtn);
   li.appendChild(span);
   toDoList.appendChild(li);
 
   li.id = newToDoObj.id;
   span.className = "todo__span";
-  button.className = "todo__button";
+  dellBtn.className = "todo__button";
+  doneBtn.className = "todo__button";
 
   span.innerText = newToDoObj.text;
-  button.innerText = "v";
-  button.addEventListener("click", deleteToDo);
+  dellBtn.innerText = "x";
+  doneBtn.innerText = "v";
+  dellBtn.addEventListener("click", deleteToDo);
+  doneBtn.addEventListener("click", doneToDo);
 }
 
 function handleToDoSubmit(event) {
@@ -42,7 +52,7 @@ function handleToDoSubmit(event) {
     text: newTodo,
   };
   toDoInput.value = "";
-  toDos.push(newToDoObj);
+  toDoArray.push(newToDoObj);
   paintToDo(newToDoObj);
   saveToDos();
 }
@@ -53,5 +63,5 @@ const savedToDos = localStorage.getItem(toDos_KEY);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
+  toDoArray = parsedToDos;
 }
