@@ -11,7 +11,7 @@ function onGeoOk(position) {
       const tempInfo = document.querySelector("#weather__temperature--info");
       city.innerText = `${data.name}`;
       temperature.innerText = `${Math.floor(data.main.temp)}℃`;
-      description.innerText = `${data.weather[0].description}`;
+      description.innerText = `☁ ${data.weather[0].description}`;
       tempInfo.innerText = `최고: ${Math.floor(
         data.main.temp_max
       )} 최저: ${Math.floor(data.main.temp_min)}`;

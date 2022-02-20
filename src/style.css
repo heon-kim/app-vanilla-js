@@ -51,13 +51,8 @@ input:not(#login-form input) {
   opacity: 50%;
 }
 
-.box-container,
-.clock__column {
-  display: flex;
-  justify-content: space-between;
-}
-
 .box {
+  width: 420px;
   height: 200px;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 30px;
@@ -73,13 +68,15 @@ input:not(#login-form input) {
   justify-content: center;
 }
 
-.box--double {
-  width: 420px;
-}
-
 .box--quater {
   width: 420px;
   height: 420px;
+}
+
+.box-container,
+.clock__column {
+  display: flex;
+  justify-content: space-between;
 }
 
 #clock {
@@ -115,23 +112,18 @@ input:not(#login-form input) {
   margin-bottom: 30px;
 }
 
-#todo {
-  overflow: auto;
-}
-#todo__form,
-#calendar__title {
+.box-title {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-#todo__list {
-  list-style: none;
+#todo {
+  overflow: auto;
 }
 
-li,
-.calendar__column {
-  margin-bottom: 10px;
+#todo__list {
+  list-style: none;
 }
 
 .todo__button {
@@ -149,6 +141,11 @@ li,
 
 .todo__done {
   text-decoration-line: line-through;
+}
+
+li,
+.calendar__column {
+  margin-bottom: 10px;
 }
 
 .calendar__column {
