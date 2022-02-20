@@ -11,7 +11,7 @@ function saveToDos() {
 
 function doneToDo(event) {
   const span = event.target.nextSibling;
-  span.classList.toggle("done");
+  span.classList.toggle("todo__done");
 }
 
 function deleteToDo(event) {
