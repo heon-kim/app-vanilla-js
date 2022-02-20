@@ -105,6 +105,11 @@ input:not(#login-form input) {
   animation: blink-effect 1s forwards infinite;
 }
 
+#weather__city,
+#weather__description {
+  margin-bottom: 7px;
+}
+
 #weather__temperature {
   font-size: 50px;
   margin-bottom: 30px;
