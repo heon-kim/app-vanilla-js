@@ -21,22 +21,7 @@
       </div>
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <div class="main-contents hidden">
-      <div class="box-container">
-        <div class="box box--single" id="clock">
-          <div id="clock__hour"></div>
-          <div class="clock__column">
-            <div id="clock__ampm" class="blink"></div>
-            <div id="clock__minute"></div>
-          </div>
-        </div>
-        <div class="box box--single" id="weather">
-          <div id="weather__city"></div>
-          <div id="weather__temperature"></div>
-          <div id="weather__description"></div>
-          <div id="weather__temperature--info"></div>
-        </div>
-      </div>
+    <div class="box-container main-contents hidden">
       <div class="box box--quater" id="todo">
         <form class="box-title" id="todo__form">
           <label
@@ -54,19 +39,36 @@
         </div>
         <ul id="todo__list"></ul>
       </div>
-      <div class="box box--double" id="calendar">
-        <div class="box-title" id="calendar__title"></div>
-        <div class="calendar__column">
-          <input class="calendar__time" type="time" />
-          <input class="calendar__text" type="text" placeholder="일정1" />
+      <div>
+        <div class="box-container">
+          <div class="box box--single" id="clock">
+            <div id="clock__hour"></div>
+            <div class="clock__column">
+              <div id="clock__ampm" class="blink"></div>
+              <div id="clock__minute"></div>
+            </div>
+          </div>
+          <div class="box box--single" id="weather">
+            <div id="weather__city"></div>
+            <div id="weather__temperature"></div>
+            <div id="weather__description"></div>
+            <div id="weather__temperature--info"></div>
+          </div>
         </div>
-        <div class="calendar__column">
-          <input class="calendar__time" type="time" />
-          <input class="calendar__text" type="text" placeholder="일정2" />
-        </div>
-        <div class="calendar__column">
-          <input class="calendar__time" type="time" />
-          <input class="calendar__text" type="text" placeholder="일정3" />
+        <div class="box box--double" id="calendar">
+          <div class="box-title" id="calendar__title"></div>
+          <div class="calendar__column">
+            <input class="calendar__time" type="time" />
+            <input class="calendar__text" type="text" placeholder="일정1" />
+          </div>
+          <div class="calendar__column">
+            <input class="calendar__time" type="time" />
+            <input class="calendar__text" type="text" placeholder="일정2" />
+          </div>
+          <div class="calendar__column">
+            <input class="calendar__time" type="time" />
+            <input class="calendar__text" type="text" placeholder="일정3" />
+          </div>
         </div>
       </div>
     </div>
