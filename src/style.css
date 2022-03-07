@@ -55,7 +55,9 @@ input:not(#login-form input) {
   opacity: 50%;
 }
 #greeting {
+  font-size: 50px;
   margin-bottom: 79px;
+  opacity: 0.9;
 }
 .box {
   width: 420px;
@@ -123,10 +125,12 @@ input:not(#login-form input) {
   margin-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
+#todo__input {
+  width: 65%;
+}
 #quotes {
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.4;
   margin-bottom: 15px;
 }
